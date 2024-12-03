@@ -56,7 +56,7 @@ public class inicio extends JFrame {
 		
 		JButton btnExcepciones = new JButton("EXCEPCIONES");
 		btnExcepciones.setSelectedIcon(null);
-		btnExcepciones.setIcon(new ImageIcon(inicio.class.getResource("/imagenes/clases64.png")));
+		btnExcepciones.setIcon(new ImageIcon(inicio.class.getResource("/imagenes/excepciones64.png")));
 		btnExcepciones.setBounds(10, 204, 174, 79);
 		contentPane.add(btnExcepciones);
 		
@@ -98,7 +98,7 @@ public class inicio extends JFrame {
 		
 		JButton btnGanador = new JButton("GANADOR");
 		btnGanador.setSelectedIcon(null);
-		btnGanador.setIcon(new ImageIcon(inicio.class.getResource("/imagenes/clases64.png")));
+		btnGanador.setIcon(new ImageIcon(inicio.class.getResource("/imagenes/ganador64.png")));
 		btnGanador.setBounds(417, 204, 174, 79);
 		contentPane.add(btnGanador);
 	}

@@ -6,8 +6,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JTextArea;
 
-public class clases extends JFrame {
+public class personas extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -19,7 +20,7 @@ public class clases extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					clases frame = new clases();
+					personas frame = new personas();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -31,21 +32,19 @@ public class clases extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public clases() {
+	public personas() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 728, 537);
+		setBounds(100, 100, 747, 574);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("En esta ventana debe colocar un label y como imagen colocar el diagrama de clases del proyecto con las relaciones correctas");
-		lblNewLabel.setBounds(10, 11, 523, 42);
-		contentPane.add(lblNewLabel);
-		
-		JLabel lbDiagrama = new JLabel("Diagrama de clases");
-		lbDiagrama.setBounds(10, 62, 692, 425);
-		contentPane.add(lbDiagrama);
+		JTextArea txtrEnEstaVentana = new JTextArea();
+		txtrEnEstaVentana.setText("Indicaciones\r\nEn esta ventana debe generar una ventana para poder \r\nguardar los datos de una persona en un \r\narchivo independiente.\r\nEjemplo:\r\nPersona 1: \r\nJuan Perez\r\n59784562 lp\r\n70548965\r\n25");
+		txtrEnEstaVentana.setBounds(10, 11, 421, 195);
+		contentPane.add(txtrEnEstaVentana);
 	}
+
 }

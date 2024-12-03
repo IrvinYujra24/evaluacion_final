@@ -6,8 +6,11 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JButton;
 
-public class clases extends JFrame {
+public class archivos extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
@@ -19,7 +22,7 @@ public class clases extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					clases frame = new clases();
+					archivos frame = new archivos();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -31,21 +34,28 @@ public class clases extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public clases() {
+	public archivos() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 728, 537);
+		setBounds(100, 100, 800, 564);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("En esta ventana debe colocar un label y como imagen colocar el diagrama de clases del proyecto con las relaciones correctas");
-		lblNewLabel.setBounds(10, 11, 523, 42);
+		JLabel lblNewLabel = new JLabel("En esta ventana debe colocar un textbox que contenga los nombres de todos los archivos de texto utilzados en el proyecto (mínimo 4)\r\n");
+		lblNewLabel.setBounds(10, 11, 655, 30);
 		contentPane.add(lblNewLabel);
 		
-		JLabel lbDiagrama = new JLabel("Diagrama de clases");
-		lbDiagrama.setBounds(10, 62, 692, 425);
-		contentPane.add(lbDiagrama);
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(10, 58, 764, 456);
+		contentPane.add(scrollPane);
+		
+		JTextArea textArea = new JTextArea();
+		scrollPane.setViewportView(textArea);
+		
+		JButton btnGenerar = new JButton("Generar");
+		btnGenerar.setBounds(675, 15, 89, 23);
+		contentPane.add(btnGenerar);
 	}
 }
